@@ -1,0 +1,30 @@
+# Godot 4+ — editor cache and local state
+.godot/
+.nomedia
+
+# Godot — legacy / generated (see Godot docs; do not ignore *.import next to assets)
+.import/
+export.cfg
+export_credentials.cfg
+*.tmp
+*.translation
+
+# Export presets (often machine-specific paths or secrets; recreate locally)
+export_presets.cfg
+
+# Android — generated/custom build tree when using Android export
+/android/
+
+# C# / Mono (if you add a C# project later)
+.mono/
+data_*/
+mono_crash.*.json
+
+# OS / junk files
+.DS_Store
+Thumbs.db
+Desktop.ini
+*~
+
+# JetBrains IDEs
+.idea/
