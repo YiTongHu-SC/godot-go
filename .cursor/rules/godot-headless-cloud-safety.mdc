@@ -1,0 +1,27 @@
+---
+description: Godot Cloud 环境一律使用 headless，避免无主场景导致卡住
+alwaysApply: true
+---
+
+# Godot：Cloud 环境 Headless 安全门禁
+
+适用于本仓库的 Cursor Cloud / 无显示环境执行类任务。
+
+## 必须遵守
+
+- 所有 Godot 命令默认使用 `--headless`。
+- 项目初始化或缓存重建使用：`godot --headless --import`（在仓库根目录）。
+- 运行场景时必须显式给出场景：`godot --headless <scene.tscn>`。
+- 仅做脚本语法检查时使用：`godot --headless --check-only -s <script.gd>`。
+
+## 严禁
+
+- 不要在本仓库执行 `godot --headless --quit` 作为通用探活命令（无主场景时可能挂住）。
+- 不要假设项目配置了 main scene；若要运行，必须指定场景文件。
+
+## 简短示例
+
+- ✅ `godot --headless --import`
+- ✅ `godot --headless res://scenes/main.tscn`
+- ✅ `godot --headless --check-only -s res://scripts/player.gd`
+- ❌ `godot --headless --quit`
