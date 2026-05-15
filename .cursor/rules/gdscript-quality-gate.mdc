@@ -1,0 +1,23 @@
+---
+description: 变更 GDScript 时必须通过格式与静态检查
+alwaysApply: true
+---
+
+# GDScript：质量门禁（格式 + Lint + 语法）
+
+当执行类任务涉及 `*.gd` 文件新增或修改时，必须执行以下最小质量检查。
+
+## 必须遵守
+
+- 格式检查：`gdformat --check <file.gd>`。
+- Lint 检查：`gdlint <file.gd>`。
+- Godot 语法检查：`godot --headless --check-only -s <file.gd>`。
+
+## 失败处理
+
+- 任一检查失败，先修复再继续后续验证。
+- 若需自动格式化，可执行 `gdformat <file.gd>`，随后重新跑三项检查。
+
+## 提交前要求
+
+- 提交说明需明确记录本次运行过的检查命令。

@@ -35,3 +35,11 @@ The blank template has no main scene by default; you must specify a scene file o
 - `godot --headless --quit` hangs if no main scene is defined in `project.godot`. Always specify a scene file explicitly or use `--import` for project initialization.
 - Godot's `Engine.get_version_info()["string"]` returns a `Variant`; use explicit `var x: String = ...` rather than `:=` for type-safe assignment.
 - The `.godot/` directory is gitignored and regenerated automatically by `godot --headless --import`.
+
+## Skills (SOP) usage
+
+Use these reusable SOPs from `.cursor/skills/` whenever the scenario matches:
+
+- `godot-headless-bootstrap.md`: project import/bootstrap in Cloud VM.
+- `gdscript-change-checklist.md`: quality gate after editing any `*.gd`.
+- `godot-scene-smoke-test.md`: scene-level smoke validation after scene/script wiring changes.
